@@ -1,27 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+
 class App extends Component {
+  state = {
+      so: 0
+    }
+  cong() {
+    this.setState({ so: this.state.so + 1 })
+  };
+
+  tru() {
+    this.setState({ so: this.state.score -1 })
+  };
+
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+    return(
+      <div >
+        <button className='red' onClick={this.cong.bind(this)} >+</button>
+        <p className='so'>{this.state.so}</p>
+        <button className='green' onClick={this.tru.bind(this)}>-</button>
       </div>
-    );
+    )
   }
 }
 
