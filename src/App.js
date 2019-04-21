@@ -16,7 +16,7 @@ class App extends Component {
 
   render() {
     return(
-      <div >
+      <div className="background">
         <button className='red' onClick={this.cong.bind(this)} >+</button>
         <p className='so'>{this.state.so}</p>
         <button className='green' onClick={this.tru.bind(this)}>-</button>
